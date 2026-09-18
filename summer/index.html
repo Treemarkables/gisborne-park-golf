@@ -4,15 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Summer Golf Membership Gisborne — 18 holes NZ$350</title>
-  <meta name="description" content="Summer membership at Gisborne Park Golf Club: 18 holes for $350 incl. GST. Friendly, relaxed club. No booking — just turn up and play, then a cold beverage afterwards. Call 06 867 9849." />
+  <meta name="description" content="Summer membership at Gisborne Park Golf Club: 18 holes for $350. Friendly, relaxed club. No booking — just turn up and play, then a cold beverage afterwards. Call 06 867 9849." />
   <link rel="canonical" href="https://treemarkables.github.io/gisborne-park-golf/summer/" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Summer Golf Membership Gisborne — 18 holes NZ$350" />
-  <meta property="og:description" content="Summer membership at Gisborne Park Golf Club: 18 holes for $350 incl. GST. Friendly, relaxed club. No booking — just turn up and play, then a cold beverage afterwards. Call 06 867 9849." />
+  <meta property="og:description" content="Summer membership at Gisborne Park Golf Club: 18 holes for $350. Friendly, relaxed club. No booking — just turn up and play, then a cold beverage afterwards. Call 06 867 9849." />
   <meta property="og:url" content="https://treemarkables.github.io/gisborne-park-golf/summer/" />
+  <meta property="og:image" content="https://treemarkables.github.io/gisborne-park-golf/summer/gpgc-summer-membership.jpg" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="1080" />
   <meta property="og:site_name" content="Gisborne Park Golf Club" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://treemarkables.github.io/gisborne-park-golf/summer/gpgc-summer-membership.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap" />
@@ -161,21 +165,73 @@
       .btn-phone-label { display: none; }
     }
 
-    .hero { padding: 2.5rem 0 2rem; }
-    @media (min-width: 768px) { .hero { padding: 4rem 0 2.5rem; } }
+    .hero { padding: 2rem 0 2rem; }
+    @media (min-width: 768px) { .hero { padding: 3.5rem 0 2.5rem; } }
+    .hero-grid {
+      display: grid;
+      grid-template-areas:
+        "kicker"
+        "title"
+        "visual"
+        "lede"
+        "cta"
+        "notice";
+      gap: 1.15rem;
+    }
+    .hero-grid .kicker { grid-area: kicker; }
+    .hero-grid h1 { grid-area: title; }
+    .hero-grid .promo { grid-area: visual; }
+    .hero-grid .lede { grid-area: lede; }
+    .hero-grid .cta-row { grid-area: cta; margin-top: 0.35rem; }
+    .hero-grid .notice { grid-area: notice; margin-top: 0.15rem; }
     .hero h1 {
-      margin-top: 1rem;
+      margin-top: 0;
       max-width: 20ch;
       font-size: 2.35rem;
       color: var(--ink);
     }
     @media (min-width: 768px) { .hero h1 { font-size: 3.75rem; line-height: 1; max-width: 16ch; } }
     .hero .lede {
-      margin-top: 1.5rem;
+      margin-top: 0;
       max-width: 62ch;
       font-size: 1.125rem;
       line-height: 1.625;
       color: rgba(28, 32, 51, 0.75);
+    }
+    .promo {
+      margin: 0 auto;
+      max-width: 36rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid var(--gold);
+      background: var(--navy);
+      box-shadow: 0 1px 2px rgba(14,18,51,.05), 0 12px 32px rgba(14,18,51,.1);
+    }
+    .promo a { display: block; }
+    .promo a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .promo img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(22rem, 32rem);
+        grid-template-areas:
+          "kicker visual"
+          "title  visual"
+          "lede   visual"
+          "cta    visual"
+          "notice visual";
+        column-gap: 3rem;
+        row-gap: 1.15rem;
+        align-items: center;
+      }
+      .promo {
+        max-width: none;
+        align-self: center;
+      }
     }
     .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2.25rem; }
     .notice {
@@ -407,15 +463,30 @@
 
   <main>
     <section class="hero">
-      <div class="wrap">
-        <p class="kicker">Summer membership · 18 holes · GST included</p>
+      <div class="wrap hero-grid">
+        <p class="kicker">Summer membership · 18 holes</p>
         <h1 class="display">Play 18 holes all summer. $350.</h1>
+        <figure class="promo">
+          <a href="tel:+6468679849">
+            <picture>
+              <source type="image/webp" srcset="gpgc-summer-membership.webp" />
+              <img
+                src="gpgc-summer-membership.jpg"
+                width="1080"
+                height="1080"
+                alt="Gisborne Park Golf Club summer membership, 18 holes, $350. Friendly, relaxed club. No booking — just turn up. Cold drink afterwards. Join for summer, call 06 867 9849."
+                decoding="async"
+                fetchpriority="high"
+              />
+            </picture>
+          </a>
+        </figure>
         <p class="lede">Gisborne’s friendliest parkland club — relaxed, five minutes from town. No booking. Just turn up and play eighteen. Then stay for a cold beverage. That’s the membership perk.</p>
         <div class="cta-row">
           <a class="btn btn-lg btn-navy" href="tel:+6468679849">Call 06 867 9849</a>
           <a class="btn btn-lg btn-ghost" href="mailto:info@gisbornepark.co.nz">Email the club</a>
         </div>
-        <p class="notice">$350 includes GST. No online checkout — join by phone or in the clubhouse (open 8am to 4pm). Questions? Phone <a href="tel:+6468679849">06 867 9849</a> or email <a href="mailto:info@gisbornepark.co.nz">info@gisbornepark.co.nz</a>.</p>
+        <p class="notice">No online checkout — join by phone or in the clubhouse (open 8am to 4pm). Questions? Phone <a href="tel:+6468679849">06 867 9849</a> or email <a href="mailto:info@gisbornepark.co.nz">info@gisbornepark.co.nz</a>.</p>
       </div>
     </section>
 
@@ -427,7 +498,7 @@
             <h2>Summer membership — 18 holes</h2>
             <p>One seasonal sub for the full course. Play the warmer months without a full-year membership — and without paying a green fee every time you walk onto the first tee.</p>
           </div>
-          <p class="price"><strong>$350</strong> <span>incl. GST</span></p>
+          <p class="price"><strong>$350</strong> <span>18 holes</span></p>
         </article>
       </div>
     </section>
@@ -501,13 +572,6 @@
             </div>
             <span class="inc-pill">Included</span>
           </div>
-          <div class="inc-row">
-            <div>
-              <div class="label">GST</div>
-              <div class="detail">The $350 is the full price</div>
-            </div>
-            <span class="inc-pill">Incl. GST</span>
-          </div>
         </div>
       </div>
     </section>
@@ -577,7 +641,7 @@
           </div>
           <div class="faq-item">
             <h3>What does summer membership cover?</h3>
-            <p>Eighteen holes — the full course — through the summer season, for $350 including GST. It is a seasonal club membership, not a casual green fee.</p>
+            <p>Eighteen holes — the full course — through the summer season, for $350. It is a seasonal club membership, not a casual green fee.</p>
           </div>
           <div class="faq-item">
             <h3>Do I need to book a tee time?</h3>
