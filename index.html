@@ -153,6 +153,185 @@ a.summer-nav-cta {
   }
 }
 
+/* Centre-align marketing content across SPA pages.
+   Header/nav stays start-aligned. Footer columns, scorecards, and
+   true copy+media two-column rows keep internal alignment. */
+main .kicker,
+main .heading-display,
+main .heading-section {
+  text-align: center;
+}
+main .heading-display.max-w-3xl,
+main .max-w-xl,
+main .max-w-prose,
+main .max-w-2xl,
+main .max-w-md,
+main .max-w-sm {
+  margin-left: auto;
+  margin-right: auto;
+}
+main p.max-w-xl,
+main p.max-w-prose,
+main p.max-w-md,
+main div.max-w-prose,
+main .max-w-2xl.rounded-xl {
+  text-align: center;
+}
+main .rule-gold {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .flex.flex-wrap.gap-3,
+main .flex.flex-wrap.gap-4 {
+  justify-content: center;
+}
+main .text-center.md\:text-left {
+  text-align: center;
+}
+main .flex.flex-col.justify-between.rounded-2xl,
+main .summer-offer-card {
+  text-align: center;
+}
+main .summer-offer-card {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .flex.items-baseline.gap-1\.5,
+main .flex.flex-wrap.items-center.gap-2\.5 {
+  justify-content: center;
+}
+main .rounded-2xl.bg-club-100 {
+  text-align: center;
+}
+main .mt-14.flex.flex-wrap.items-center.gap-4.rounded-2xl.bg-club-100 .ml-auto {
+  margin-left: 0;
+}
+main .border-t-2.border-club-900,
+main .grid.gap-x-10.gap-y-12.md\:grid-cols-3 > * {
+  text-align: center;
+}
+main ul.max-w-prose {
+  text-align: left;
+}
+main .overflow-hidden.rounded-2xl.border {
+  text-align: left;
+}
+
+/* Offer card: stacked and centred, not a left/right split. */
+@media (min-width: 768px) {
+  .summer-offer-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .summer-offer-price {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+}
+
+/* True two-column copy + media: keep internal start alignment. */
+@media (min-width: 768px) {
+  main .md\:grid-cols-\[1\.3fr_1fr\] > :first-child,
+  main .md\:grid-cols-\[1fr_1\.2fr\] > :first-child,
+  main .md\:grid-cols-\[1\.2fr_1fr\] > :first-child,
+  main .grid.items-center.md\:grid-cols-2 > :first-child {
+    text-align: left;
+  }
+  main .md\:grid-cols-\[1\.3fr_1fr\] > :first-child .heading-display,
+  main .md\:grid-cols-\[1\.3fr_1fr\] > :first-child .heading-section,
+  main .md\:grid-cols-\[1\.3fr_1fr\] > :first-child .kicker,
+  main .md\:grid-cols-\[1fr_1\.2fr\] > :first-child .heading-display,
+  main .md\:grid-cols-\[1fr_1\.2fr\] > :first-child .heading-section,
+  main .md\:grid-cols-\[1fr_1\.2fr\] > :first-child .kicker,
+  main .md\:grid-cols-\[1\.2fr_1fr\] > :first-child .heading-display,
+  main .md\:grid-cols-\[1\.2fr_1fr\] > :first-child .heading-section,
+  main .md\:grid-cols-\[1\.2fr_1fr\] > :first-child .kicker,
+  main .grid.items-center.md\:grid-cols-2 > :first-child .heading-display,
+  main .grid.items-center.md\:grid-cols-2 > :first-child .heading-section,
+  main .grid.items-center.md\:grid-cols-2 > :first-child .kicker {
+    text-align: left;
+  }
+  main .md\:grid-cols-\[1\.3fr_1fr\] > :first-child .max-w-prose,
+  main .md\:grid-cols-\[1\.3fr_1fr\] > :first-child .max-w-xl,
+  main .md\:grid-cols-\[1\.3fr_1fr\] > :first-child .max-w-3xl,
+  main .md\:grid-cols-\[1\.3fr_1fr\] > :first-child .max-w-2xl,
+  main .md\:grid-cols-\[1fr_1\.2fr\] > :first-child .max-w-prose,
+  main .md\:grid-cols-\[1fr_1\.2fr\] > :first-child .max-w-xl,
+  main .md\:grid-cols-\[1fr_1\.2fr\] > :first-child .max-w-3xl,
+  main .md\:grid-cols-\[1fr_1\.2fr\] > :first-child .max-w-2xl,
+  main .md\:grid-cols-\[1\.2fr_1fr\] > :first-child .max-w-prose,
+  main .md\:grid-cols-\[1\.2fr_1fr\] > :first-child .max-w-xl,
+  main .md\:grid-cols-\[1\.2fr_1fr\] > :first-child .max-w-3xl,
+  main .md\:grid-cols-\[1\.2fr_1fr\] > :first-child .max-w-2xl,
+  main .grid.items-center.md\:grid-cols-2 > :first-child .max-w-prose,
+  main .grid.items-center.md\:grid-cols-2 > :first-child .max-w-xl,
+  main .grid.items-center.md\:grid-cols-2 > :first-child .max-w-3xl,
+  main .grid.items-center.md\:grid-cols-2 > :first-child .max-w-2xl {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+  main .md\:grid-cols-\[1\.3fr_1fr\] > :first-child .rule-gold,
+  main .md\:grid-cols-\[1fr_1\.2fr\] > :first-child .rule-gold,
+  main .md\:grid-cols-\[1\.2fr_1fr\] > :first-child .rule-gold,
+  main .grid.items-center.md\:grid-cols-2 > :first-child .rule-gold {
+    margin-left: 0;
+  }
+  main .md\:grid-cols-\[1\.3fr_1fr\] > :first-child .flex.flex-wrap.gap-3,
+  main .md\:grid-cols-\[1fr_1\.2fr\] > :first-child .flex.flex-wrap.gap-3,
+  main .md\:grid-cols-\[1\.2fr_1fr\] > :first-child .flex.flex-wrap.gap-3,
+  main .grid.items-center.md\:grid-cols-2 > :first-child .flex.flex-wrap.gap-3 {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1024px) {
+  main .lg\:grid-cols-\[1fr_1\.1fr\] > :first-child,
+  main .lg\:grid-cols-\[1\.1fr_1fr\] > :first-child,
+  main .lg\:grid-cols-\[1fr_1\.2fr\] > :first-child {
+    text-align: left;
+  }
+  main .lg\:grid-cols-\[1fr_1\.1fr\] > :first-child .heading-display,
+  main .lg\:grid-cols-\[1fr_1\.1fr\] > :first-child .heading-section,
+  main .lg\:grid-cols-\[1fr_1\.1fr\] > :first-child .kicker,
+  main .lg\:grid-cols-\[1\.1fr_1fr\] > :first-child .heading-display,
+  main .lg\:grid-cols-\[1\.1fr_1fr\] > :first-child .heading-section,
+  main .lg\:grid-cols-\[1\.1fr_1fr\] > :first-child .kicker,
+  main .lg\:grid-cols-\[1fr_1\.2fr\] > :first-child .heading-display,
+  main .lg\:grid-cols-\[1fr_1\.2fr\] > :first-child .heading-section,
+  main .lg\:grid-cols-\[1fr_1\.2fr\] > :first-child .kicker {
+    text-align: left;
+  }
+  main .lg\:grid-cols-\[1fr_1\.1fr\] > :first-child .max-w-prose,
+  main .lg\:grid-cols-\[1fr_1\.1fr\] > :first-child .max-w-xl,
+  main .lg\:grid-cols-\[1fr_1\.1fr\] > :first-child .max-w-3xl,
+  main .lg\:grid-cols-\[1fr_1\.1fr\] > :first-child .max-w-2xl,
+  main .lg\:grid-cols-\[1\.1fr_1fr\] > :first-child .max-w-prose,
+  main .lg\:grid-cols-\[1\.1fr_1fr\] > :first-child .max-w-xl,
+  main .lg\:grid-cols-\[1\.1fr_1fr\] > :first-child .max-w-3xl,
+  main .lg\:grid-cols-\[1\.1fr_1fr\] > :first-child .max-w-2xl,
+  main .lg\:grid-cols-\[1fr_1\.2fr\] > :first-child .max-w-prose,
+  main .lg\:grid-cols-\[1fr_1\.2fr\] > :first-child .max-w-xl,
+  main .lg\:grid-cols-\[1fr_1\.2fr\] > :first-child .max-w-3xl,
+  main .lg\:grid-cols-\[1fr_1\.2fr\] > :first-child .max-w-2xl {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+  main .lg\:grid-cols-\[1fr_1\.1fr\] > :first-child .rule-gold,
+  main .lg\:grid-cols-\[1\.1fr_1fr\] > :first-child .rule-gold,
+  main .lg\:grid-cols-\[1fr_1\.2fr\] > :first-child .rule-gold {
+    margin-left: 0;
+  }
+  main .lg\:grid-cols-\[1fr_1\.1fr\] > :first-child .flex.flex-wrap.gap-3,
+  main .lg\:grid-cols-\[1\.1fr_1fr\] > :first-child .flex.flex-wrap.gap-3,
+  main .lg\:grid-cols-\[1fr_1\.2fr\] > :first-child .flex.flex-wrap.gap-3 {
+    justify-content: flex-start;
+  }
+}
+
 </style>
 <div id="root"></div>
 <script type="module">

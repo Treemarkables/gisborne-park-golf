@@ -442,6 +442,54 @@
     .sticky-cta .wrap { display: flex; gap: 0.75rem; }
     .sticky-cta .btn { flex: 1; }
     @media (min-width: 768px) { .sticky-cta { display: none; } }
+
+    /* Centre-align marketing content. Header stays logo | actions.
+       Desktop hero keeps copy | promo columns inside the centred wrap. */
+    .hero-grid { text-align: center; }
+    .hero h1,
+    .hero .lede,
+    .hero .notice { margin-inline: auto; }
+    .cta-row { justify-content: center; }
+    @media (min-width: 900px) {
+      .hero-grid { text-align: left; }
+      .hero-grid h1,
+      .hero-grid .lede,
+      .hero-grid .notice { margin-inline: 0; }
+      .hero-grid .cta-row { justify-content: flex-start; }
+    }
+
+    .offer-card {
+      text-align: center;
+      align-items: center;
+      max-width: 42rem;
+      margin-inline: auto;
+    }
+    .offer-card p { margin-inline: auto; }
+    @media (min-width: 768px) {
+      .offer-card {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    .benefits,
+    .trust,
+    .faq { text-align: center; }
+    .benefit { text-align: center; }
+    .checks {
+      margin-inline: auto;
+      text-align: left;
+    }
+    .join { text-align: center; }
+    .faq-list { text-align: left; }
+    .stats .wrap > div { text-align: center; }
+    .band-grid > div:first-child { text-align: center; }
+    .band .intro { margin-inline: auto; }
+    @media (min-width: 1024px) {
+      .band-grid > div:first-child { text-align: left; }
+      .band .intro { margin-inline: 0; }
+    }
+    footer.slim { text-align: center; }
   </style>
 </head>
 <body>
